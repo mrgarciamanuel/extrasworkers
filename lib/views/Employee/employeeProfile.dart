@@ -29,13 +29,7 @@ class _EmployeeProfileState extends State<EmployeeProfile> {
           future: futureEmployeeProfile,
           builder: (context, snapshot) {
             if (snapshot.hasData) {
-              Text(snapshot.data!.id);
-              Text(snapshot.data!.name);
-              Text(snapshot.data!.surname);
-              Text(snapshot.data!.username);
-              Text(snapshot.data!.gender);
-              Text(snapshot.data!.description);
-              Text(snapshot.data!.tsdia);
+              Text(snapshot.data!.name.toString());
             } else if (snapshot.hasError) {
               return Text("${snapshot.error}");
             }
