@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 class EmployeeProfile extends StatefulWidget {
   const EmployeeProfile({super.key});
-
   @override
   State<EmployeeProfile> createState() => _EmployeeProfileState();
 }
@@ -29,7 +28,7 @@ class _EmployeeProfileState extends State<EmployeeProfile> {
           future: futureEmployeeProfile,
           builder: (context, snapshot) {
             if (snapshot.hasData) {
-              Text(snapshot.data!.name.toString());
+              return Text(snapshot.data!.name + " \n" + snapshot.data!.surname);
             } else if (snapshot.hasError) {
               return Text("${snapshot.error}");
             }

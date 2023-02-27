@@ -14,13 +14,13 @@ class Employee {
   final String profession2;
   final String profession3;
   final String country;
-  final String location;
+  //final String location;
   final String cvhref;
   final String accountstate;
   final String tsdia;
   //final int linkedcompany;to be optional
 
-  Employee(
+  const Employee(
       {required this.id,
       required this.name,
       required this.surname,
@@ -34,7 +34,7 @@ class Employee {
       required this.profession2,
       required this.profession3,
       required this.country,
-      required this.location,
+      //required this.location,
       required this.cvhref,
       required this.accountstate,
       required this.tsdia});
@@ -53,7 +53,7 @@ class Employee {
         profession2: json['profession2'].toString(),
         profession3: json['profession3'].toString(),
         country: json['country'].toString(),
-        location: json['location'].toString(),
+        //location: json['location'].toString(),
         cvhref: json['cvhref'].toString(),
         accountstate: json['accountstate'].toString(),
         tsdia: json['tsdia'].toString(),
